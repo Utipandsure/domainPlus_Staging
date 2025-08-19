@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-content {
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+}
+
+
+.box{
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 3px 3px 0 0 white;
+}
+
+.box::before{
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 140%;
+  background-image: linear-gradient(#17007c, #68020b);
+  animation: rotate 8s linear infinite;
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  background: black; 
+  inset: 5px;
+  border-radius: 16px;
+}
+
+@keyframes rotate{
+  from{
+      transform: rotate(0deg);
+  }
+
+  to{
+      transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+.hover-light::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.hover-light:hover::before {
+    transform: translateX(100%);
+}
+
+       /* Hide default scrollbar */
+       .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Custom styles for smooth scrolling */
+  #scrollContainer {
+    scroll-behavior: smooth;
+  }
+
+footer{
+    background-color:  rgb(17 24 39);
+}

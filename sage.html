@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain-Plus International Limited</title>
+    <link href="./css/output.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="./images/logo (2).png" type="image/x-icon">
+</head>
+<body class="font-Rajdhani">
+  <!-- MEDIA LINKS -->
+  <div class="sticky  grid grid-cols-2 top-0 z-50 bg-[#0e2b5c]">
+    <div class=" py-1 w-full h-full flex items-center pl-5 lg:pl-10">
+     
+    </div>
+
+    <div href="" class=" w-full h-full py-1 pr-5 flex items-center space-x-1 md:space-x-2 justify-end md:pr-10">
+      <a href="contact.html" class="flex items-center text-xs md:text-lg font-semibold space-x-1 md:space-x-2 justify-start">
+        <span class="block text-white hover:text-red-950">Contact Us:</span>
+        <ion-icon name="call-outline" class="text-white hover:text-red-950"></ion-icon>
+      </a>
+      <a href="contact.html" class="flex items-center text-xs md:text-lg font-semibold space-x-1 md:space-x-2 justify-start">
+        <span class="block text-white hover:text-red-950">Send Mail:</span>
+        <ion-icon name="mail-outline" class="text-white hover:text-red-950"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <header class="shadow-xl shadow-black">
+    <nav class="bg-white w-full fixed z-50 px-5 py-3 sm:px-10 md:py-5 flex items-center justify-between lg:border-b-[1.5px] ">
+      <!-- HEADER LOGO -->
+      <div class="flex items-center">
+        <a href="index.html"><img src="./images/logo (2).png" alt="logo" class="w-10 md:w-20" /></a>
+        <div class="text-white">
+          <p class="leading-3">
+            <a href="index.html" class="pl-5 md:text-3xl font-semibold tracking-wider text-blue-900 font-Rajdhani">Domain-Plus</a><br />
+            <a href="index.html" class="pl-4 md:text-2xl font-semibold tracking-tighter text-red-900 font-Rajdhani">International Limited</a>
+          </p>
+        </div>
+      </div>
+          
+      <!-- HEADER ICON MENU -->
+      <div class="flex-row-reverse sm:flex sm:items-center sm:gap-8 lg:gap-10">
+        <button class="border-[3px] border-[#2563eb] bg-red-800 hover:border-[3px] hover:border-red-800 transition-transform hover:scale-90 ease-linear duration-500 rounded-md hover:bg-[#2563eb] lg:hidden" onclick="openNav()">
+          <img src="./images/icon-menu.svg" alt="menu"/>
+        </button>
+        <!-- HEADER LINK MENU -->
+        <ul class="hidden text-2xl font-semibold text-red-800 lg:flex lg:justify-centr lg:gap-16 lg:text-xl font-Rajdhani">
+          <li class="text-blue-800"><a href="index.html" class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">
+            Home
+          </a></li>
+          <li><a href="about.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">About Us</a></li>
+          <li><a href="services.html" class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Services</a></li>
+          <li onmouseover="unHid()" onmouseleave="out()">
+            <a href="solution.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Brand/Product</a>
+            <div hidden id="drop" class="absolute bg-slate-100 shadow-md shadow-black py-3 px-10 rounded-md">
+              <ul role="menuitem" class="space-y-1">
+                <li><a href="sage.html" role="menuitem" class="text-lg font-bold text-blue-500">Sage</a></li>
+                <li><a href="acumatica.html" role="menuitem" class="text-lg font-bold text-blue-500">Acumatica</a></li>
+                <li><a href="microsoft.html" role="menuitem" class="text-lg font-bold text-blue-500">Microsoft Dynamics</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="blog.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Industries</a></li>
+          <li><a href="contact.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Contact</a></li>
+        </ul>
+      </div>
+          
+      <div id="sideNav" class="fixed top-0 right-0 z-10 flex items-center w-0 h-full overflow-x-hidden font-bold text-black duration-700 
+      bg-black">
+              
+        <div class="absolute flex items-center mx-4 mt-5 top-2 left-1">
+          <a href="javascript:void(0)" onclick="exitNav()"><img src="./images/icon-close.svg" alt="Close logo"/></a>
+        </div>
+              
+        <nav class="">
+          <ul class="ml-4 font-serif text-3xl text-red-800 font-semibold text-left sm:text-4xl font-Rajdhani">
+            <li class="p-2 text-blue-800"><a href="index.html" class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Home</a></li>
+            <li class="p-2"><a href="about.html">About</a></li>
+            <li class="p-2"><a href="services.html">Services</a></li>
+            <li onmouseover="Hid()" onmouseout="outen()" class="relative p-2">
+              <a href="solution.html">Brand/Product</a>
+              <div hidden id="hid" class="absolute top-0 bg-slate-100 shadow-md shadow-black py-3 px-10 rounded-md">
+                <ul class="space-y-3">
+                  <li><a href="sage.html" class="text-lg font-bold text-blue-500">Sage</a></li>
+                  <li><a href="acumatica.html" class="text-lg font-bold text-blue-500">Acumatica</a></li>
+                  <li><a href="microsoft.html" class="text-lg font-bold text-blue-500">Microsoft Dynamics</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="p-2"><a href="blog.html">Industries</a></li>
+            <li class="p-2"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      
+    </nav>
+  
+    <div onclick="exitNav()" id="sideBar" class="">
+  </div> 
+    
+          
+      <!-- HEADER SECTION FINANCIAL -->
+      <div>
+          <div class="bg-sage bg-cover bg-no-repeat bg-center">
+            <div class="bg-black bg-opacity-50 flex flex-col items-center justify-center py-20 md:pt-60">
+              <h1 class="text-white text-4xl capitalize md:text-6xl">financial solution</h1>
+              <p class="text-white text-xl font-semiboldtext-center max-w-3xl pt-9 leading-10 md:text-2xl md:max-w-4xl lg:max-w-5xl">
+                Domain-Plus International Limited is one of the leading ICT consultancy and Training Providers in Nigeria. 
+                We assist our clients in achieving significant improvements in operating performance via state-of-the-art automation.
+              </p>
+            </div>
+          </div>
+        </div>
+    </header>
+
+     <!-- SAGE PEOPLE -->
+
+     <section id="sage300" class="bg-slate-500">
+      <!-- SAGE 300 -->
+      <div class="flex flex-col items-center justify-center px-8 mx-auto py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+          <!-- SAGE LOGO -->
+          <div class="sub_container">
+              <img src="./images/Sage-300-Logo.png" alt="Sage Logo" class="w-60"/>
+              <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                  Sage 300 ERP is an enterprise resource planning (ERP) software system that serves small and medium-sized businesses in 
+                  professional services, financial services, the public sector, and other markets such as distribution and wholesale.
+              </p>
+
+              <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                  The solution comes in three different versions: Sage 300 Standard, Advanced, and Premium ERP. These versions correspond 
+                  with the scalability requirements of the customers, as defined by company size and the number of users. Sage 300 ERP is 
+                  designed as a multi-tiered architecture, so it can run on Windows and Linux operating systems with Microsoft, Pervasive, or 
+                  Oracle dataxl s. Sage 300 ERP product is designed to run using Microsoft SQL Server. By understanding how Microsoft SQL 
+                  Server works, implementing and supporting Sage 300 ERP will become easier and more efficient. 
+              </p>
+
+              <p class="text-center block sm:hidden md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                  The solution comes in three different versions: Sage 300 Standard, Advanced, and Premium ERP. These versions correspond 
+                  with the scalability requirements of the customers, as defined by company size and the number of users. Sage 300 ERP is 
+                  designed as a multi-tiered architecture, so it can run on Windows and Linux operating systems with Microsoft, Pervasive, or 
+                  Oracle dataxl s.
+              </p>
+              
+          </div>
+          <!-- SAGE 300 DASHBOARD IMAGE -->
+              <img src="./images/hero_sage300_dashboard.webp" alt="Dashboard Hero Sage Image" class="w-[500px]"/>
+           
+      </div>
+      
+  </section>
+
+    <!-- SECTION SAGE X3 -->
+    <section class="bg-white" id="sage3x">
+        <div class="flex flex-col items-center justify-center gap-10 px-8 mx-auto pl-7 md:pl-12 lg:pl-20 py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+              <!-- SAGE LOGO -->
+              <div class="sub_container">
+                  <img src="./images/x3-logo.png" alt="Sage Logo" class="w-40"/>
+                  <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                      Sage X3, also known as Sage Business Cloud Enterprise Management is an ERP package from the Sage group. Sage X3 can
+                      handle the complete data flow of large-scale organizations and can also be perfect for SMEs as well.
+                  </p>
+                 
+                  <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                      Sage X3 is a simple, flexible, cost-effective, end-to-end ERP that integrates all the business operations under one
+                      enterprise management solution and dataxl . It is easily accessed online as it is web-xl d through on-premise or 
+                      cloud hosting and offers multi-currency, multi-country, multi-language, and multi-location features making it suitable
+                      for large enterprises as well as enterprises having global operations. It includes features such as inbuilt analytics,
+                      and visual processes that provide a graphical view of the sequence of steps/screens to perform the activities,
+                      notifications, alerts, and workflows that make it more user-friendly and provide analysis and decision-making as
+                      well.
+                  </p>
+
+                  <p class="text-center block sm:hidden md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                      Sage X3 is most used by manufacturers and traders, usually, any organization that relies on complex departments and 
+                      handles a high volume of data transactions including reporting, purchasing, inventory, CRM, production management, 
+                      quality control, HR & payroll management, etc.
+                  </p>
+              </div>
+              <!-- SAGE 300 DASHBOARD IMAGE -->
+                  <img src="./images/Sage-X3-Diagram2.jpg" alt="Sage x3 cloud Image" class="w-[500px] rounded-[50%]"/>
+               
+        </div>
+    </section>
+
+
+    <!-- SAGE CRM -->
+    <section id="sagecrm" class="bg-slate-500">
+        <div class="flex flex-col items-center justify-center gap-10 px-8 mx-auto pl-7 md:pl-12 lg:pl-20 py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+            <!-- SAGE LOGO -->
+            <div class="sub_container">
+                <h1 class="text-6xl font-semibold font-Rajdhani">Sage CRM</h1>
+                <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                    Sage CRM is a cloud-xl d customer relationship management solution designed to help small and midsize businesses 
+                    optimize their customer experience by offering tools to manage new and existing client relationships.
+                </p>
+               
+                <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                    Sage CRM can be used to track the performance of sales agents, forecast trends, schedule meetings, and more. 
+                    The dashboard gives visibility on the current sales deals and the reporting and analytic features help in forecasting 
+                    sales performance and tracking new opportunities. The marketing tools help campaigners to plan and execute marketing and 
+                    promotion campaigns. The solution is capable of managing campaigns across multiple channels. The built-in email marketing 
+                    feature allows sending promotional messages and newsletters to the contacts.
+                </p>
+
+                <p class="text-center  md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                    Over 10,000 organizations across the globe use Sage CRM every day to manage and maximize the performance of their 
+                    business. With customers in over 70 countries worldwide, Sage CRM is an award-winning web-xl d CRM solution. 
+                    Applications include integrated modules for sales and marketing automation, customer service, help desk, social CRM, 
+                    and more. Sage CRM also offers robust mobile capabilities. The software can be deployed in the cloud and on-premise. 
+                </p>
+            </div>
+            <!-- SAGE 300 DASHBOARD IMAGE -->
+                <img src="./images/ssage-crm-marketing.png" alt="Sage crm cloud Image" class="w-[500px]"/>
+             
+        </div>
+
+    </section>
+
+
+    <section class="w-full bg-white" id="sage300people">
+      <!-- SAGE PEOPLE -->
+    <div class="flex flex-col items-center justify-center px-8 mx-auto py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+      <!-- SAGE PEOPLE LOGO -->
+      <div class="sub_container">
+          <img src="./images/sage-people.png" alt="Sage Logo" class="w-60"/>
+          <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+              Sage 300 People HR Software is designed for small and medium-sized businesses that require sophisticated and complicated
+              HR and payroll functionality.
+          </p>
+
+          <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+              Sage 300 People comprises an agile, innovative, and cost-effective HR solution that effortlessly and powerfully processes 
+              HR and payroll functions in your business. Its world-class capabilities include fast and efficient system implementation, 
+              security, stability, improved processes, real-time online design for easy monitoring and reduced risk, and a universal 
+              calculation engine for simpler calculations across functions.
+          </p>
+          
+      </div>
+      <!-- SAGE 300 DASHBOARD IMAGE -->
+          <img src="./images/sage_300_people.jpg" alt="Dashboard Hero Sage Image" class="w-[500px]"/>
+       
+    </div>
+  </section>
+    
+
+  <!-- sage 50 -->
+  <section class="bg-slate-500">
+    <div class="flex flex-col items-center justify-center gap-10 px-8 mx-auto pl-7 md:pl-12 lg:pl-20 py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+          <!-- SAGE LOGO -->
+          <div class="sub_container">
+              <img src="./images/sage50.png" alt="Sage Logo" class="w-40"/>
+              <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                Sage 50 can help your small business by streamlining your accounting processes, automating your invoicing and billing, managing your inventory, and providing you with real-time financial insights. Some key features of Sage 50 include invoicing and billing, expense tracking, inventory management, financial reporting, and payroll processing.
+              </p>
+             
+              <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                Using desktop accounting software doesn't mean you're tied to your desk. The working week looks different for everyone, so take your work with you. With cloud-connected capabilities, Sage 50 gives you greater flexibility and freedom in how you work and allows you to collaborate with your accountant, sharing data securely.
+              </p>
+
+              <p class="text-center block sm:hidden md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+                Sage 50, formerly known as Sage 50cloud, is an accounting software for small businesses with in-house bookkeepers who need to simplify basic admin and processes like everyday invoicing and financial management alongside more complex business accounting and payroll tasks. Sage 50 combines the power of desktop accounting with the flexibility of cloud connectivity, to give you time back, advanced functionality, and business-wide actionable insight.
+              </p>
+          </div>
+          <!-- SAGE 300 DASHBOARD IMAGE -->
+              <img src="./images/sage_50+graph.png" alt="Sage x3 cloud Image" class="w-[500px] rounded-[50%]"/>
+           
+    </div>
+  </section>
+
+      <!-- sage 200 -->
+      <section class="w-full bg-white">
+        <!-- SAGE PEOPLE -->
+      <div class="flex flex-col items-center justify-center px-8 mx-auto py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+        <!-- SAGE PEOPLE LOGO -->
+        <div class="sub_container">
+            <img src="./images/sage200cloud.svg" alt="Sage Logo" class="w-40"/>
+            <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+              Sage 200 Evolution is a Business Management Solution that gives you the ability to control your financial situation as well as your relationships with your customers, suppliers and employees.
+            </p>
+
+            <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+              Sage 200 Evolution is a reliable and affordable way to get things done. Our software is compliant, secure, and grows with you and your needs. Sage 200 Evolution gives you the efficiency and collaboration needed to keep work flowing. Bring your processes together, all in one place, with Sage 200 Evolution. Perfect for your growing business, you can streamline your workflow end to end, collaborate in real time, and make smarter decisions with a single source of truth.
+            </p>
+            
+        </div>
+        <!-- SAGE 300 DASHBOARD IMAGE -->
+            <img src="./images/sage200evolution.webp" alt="Dashboard Hero Sage Image" class="w-[500px]"/>
+         
+      </div>
+    </section>
+
+
+    <section class="w-full bg-white">
+      <!-- SAGE cloud -->
+    <div class="flex flex-col items-center justify-center px-8 mx-auto py-7 lg:px-7 lg:py-10 lg:flex-row lg:gap-8">
+      <!-- SAGE PEOPLE LOGO -->
+      <div class="sub_container">
+          <img src="./images/sage_business.png" alt="Sage Logo" class="w-40"/>
+          <p class="text-center md:mx-auto lg:mx-0 text-xl font-semibold pt-4 lg:text-start lg:pt-5 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+            Sage Accounting is designed for small business owners (supports unlimited users) and sole traders (with or without staff) operating in any industry – from professional services to construction to retail.
+            Sage Accounting is software for managing your business’s accounting. It allows you to quickly and easily create and track invoices, track cash flow, accept payments, record transactions, automate admin, capture expenses, and much more.
+          </p>
+
+          <p class="text-center hidden sm:block md:mx-auto lg:mx-0 text-xl font-semibold pt-4 pb-6 lg:text-start lg:pt-5 lg:pb-8 font-Rajdhani max-w-[700px] lg::max-w-[600px]">
+            Sage Accounting is designed for high performance even on low internet speeds. A standard phone connection (with typical mobile 3G speed) has you covered. For those of you interested in the specs, a minimum download speed of 2mbps is essential to keep Sage Accounting up to date and to take full advantage of its features. Your smartphone will give you more than enough speed to use Sage Accounting smoothly. For optimal performance we also recommend that you use the most up-to-date version of your web browser. You can take a no-risk, no-obligation free trial to see whether you’re happy with the speed of Sage Accounting on your internet connection.   
+          </p>
+          
+      </div>
+      <!-- SAGE 300 DASHBOARD IMAGE -->
+          <img src="./images/sage-business.png" alt="Dashboard Hero Sage Image" class="w-[500px]"/>
+       
+    </div>
+  </section>
+      <!-- FOOTER  -->
+    <footer>
+        <div class="px-6 py-10 lg:flex lg:justify-evenly">
+            <div class="">
+              <div class="flex items-center py-3">
+                <img src="./images/logo (2).png" alt="logo" class="w-20" />
+                <div class="text-white">
+                  <p class="leading-3 text-center">
+                    <span class="pl-5 text-xl font-semiboldfont-semibold tracking-widest text-white">Domain-Plus</span><br />
+                    <span class="tracking-tighter ">International Limited</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-white lg:max-w-96">
+                Domain Plus provides reliable domain registration, web hosting, and website development, ensuring a strong online presence with user-friendly tools and expert support.
+              </p>
+              <div class="flex items-center gap-4 py-3">
+                
+                <p class="text-white ">
+                  Domain-Plus International Limited - <span class="font-semibold">DPLUS</span>
+                </p>
+              </div>
+            </div>
+            <section class="flex gap-10 text-white md:gap-48 lg:gap-10 lg:px-">
+              <div>
+                <p class="pb-3 text-2xl pt-7">SOLUTIONS</p>
+                <ul class="px-5 list-disc">
+                  <li class="py-2"><a href="solution.html#sage300">Sage 300</a></li>
+                  <li class="py-2"><a href="solution.html#sage3x">Sage X3</a></li>
+                  <li class="py-2"><a href="solution.html#sagecrm">Sage CRM</a></li>
+                  <li class="py-2"><a href="solution.html#sage300people">Sage 300 People</a></li>
+                  <!-- <li class="py-2"><a href="solution.html#acumatica">Acumatica</a></li>
+                  <li class="py-2"><a href="solution.html#microsoftdynamic">Microsoft Dynamic 365</a></li> -->
+                </ul>
+              </div>
+              <div>
+                <p class="pb-3 text-2xl pt-7">QUICK LINKS</p>
+                <ul class="px-5 list-disc">
+                  <li class="py-2"><a href="index.html">Home</a></li>
+                  <li class="py-2"><a href="solution.html">Solution</a></li>
+                  <li class="py-2"><a href="contact.html">Contact</a></li>
+                  <li class="py-2"><a href="services.html">Services</a></li>
+                </ul>
+              </div>
+            </section>
+            <div class="mt-5">
+              <p class="pb-3 text-2xl text-white ">NEWSLETTER</p>
+              <input type="text" name="email" placeholder="Your Email..." class="w-full p-3 border-2 rounded-lg outline-none cursor-pointer" />
+              <button class="w-full px-4 py-3 my-4 font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                SUBSCRIBE
+              </button>
+              <div class="md:space-x-4">
+                <a href=""><ion-icon name="logo-facebook" class="text-xl font-semiboldtext-white md:text-3xl hover:text-blue-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter" class="text-xl font-semiboldtext-white md:text-3xl hover:text-blue-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram" class="text-xl font-semiboldtext-white md:text-3xl hover:text-red-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-whatsapp" class="text-xl font-semiboldtext-white md:text-3xl hover:text-green-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin" class="text-xl font-semiboldtext-white md:text-3xl hover:text-blue-700"></ion-icon></a></a>
+                <a href="mailto:"><ion-icon name="mail-outline" class="text-xl font-semiboldtext-white md:text-3xl hover:text-red-700"></ion-icon></a>
+            </div>
+            </div>
+        </div>
+
+            <!-- DOMAIN PLUS COPYRIGHT -->
+            <div class="bg-white  text-black font-bold flex items-center justify-center md:justify-between px-20 py-2">
+                <p class="font-Rajdhani text-sm lg:text-lg">Copyright &copy 2024 Domain-Plus International Limited. All right reserved</p>
+                <p class="font-Rajdhani text-sm lg:text-lg">Powered by dervac</p>
+            </div>
+    </footer>
+    <script>
+        const unHid = () => {
+        const hid = document.querySelector('#drop');
+        hid.hidden = false;
+      }
+      
+      const out = () => {
+        const held = document.querySelector('#drop');
+        held.hidden = true;
+        }
+     
+        const Hid = () => {
+          const hid = document.querySelector('#hid');
+          hid.hidden = false;
+        }
+      
+        const outen = () => {
+          const held = document.querySelector('#hid');
+            held.hidden = true;
+        }
+    </script>
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

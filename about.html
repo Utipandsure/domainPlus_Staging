@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain-Plus International Limited</title>
+    <link href="./css/output.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="./images/logo (2).png" type="image/x-icon">
+</head>
+<body> 
+  <div class="sticky  grid grid-cols-2 top-0 z-50 bg-[#0e2b5c]">
+    <div class=" py-1 w-full h-full flex items-center pl-5 lg:pl-10">
+     
+    </div>
+
+    <div href="" class=" w-full h-full py-1 pr-5 flex items-center space-x-1 md:space-x-2 justify-end md:pr-10">
+      <a href="contact.html" class="flex items-center text-xs md:text-lg font-semibold space-x-1 md:space-x-2 justify-start">
+        <span class="block text-white hover:text-red-950">Contact Us:</span>
+        <ion-icon name="call-outline" class="text-white hover:text-red-950"></ion-icon>
+      </a>
+      <a href="contact.html" class="flex items-center text-xs md:text-lg font-semibold space-x-1 md:space-x-2 justify-start">
+        <span class="block text-white hover:text-red-950">Send Mail:</span>
+        <ion-icon name="mail-outline" class="text-white hover:text-red-950"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <header class="shadow-xl shadow-black">
+    <nav class="bg-white w-full fixed z-50 px-5 py-3 sm:px-10 md:py-5 flex items-center justify-between lg:border-b-[1.5px] ">
+      <!-- HEADER LOGO -->
+      <div class="flex items-center">
+        <a href="index.html"><img src="./images/logo (2).png" alt="logo" class="w-10 md:w-20" /></a>
+        <div class="text-white">
+          <p class="leading-3">
+            <a href="index.html" class="pl-5 md:text-3xl font-semibold tracking-wider text-blue-900 font-Rajdhani">Domain-Plus</a><br />
+            <a href="index.html" class="pl-4 md:text-2xl font-semibold tracking-tighter text-red-900 font-Rajdhani">International Limited</a>
+          </p>
+        </div>
+      </div>
+          
+      <!-- HEADER ICON MENU -->
+      <div class="flex-row-reverse sm:flex sm:items-center sm:gap-8 lg:gap-10">
+        <button class="border-[3px] border-[#2563eb] bg-red-800 hover:border-[3px] hover:border-red-800 transition-transform hover:scale-90 ease-linear duration-500 rounded-md hover:bg-[#2563eb] lg:hidden" onclick="openNav()">
+          <img src="./images/icon-menu.svg" alt="menu"/>
+        </button>
+        <!-- HEADER LINK MENU -->
+        <ul class="hidden text-2xl font-semibold text-red-800 lg:flex lg:justify-centr lg:gap-16 lg:text-xl font-Rajdhani">
+          <li class="text-blue-800"><a href="index.html" class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">
+            Home
+          </a></li>
+          <li><a href="about.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">About Us</a></li>
+          <li><a href="services.html" class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Services</a></li>
+          <li onmouseover="unHid()" onmouseleave="out()">
+            <a href="solution.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Brand/Product</a>
+            <div hidden id="drop" class="absolute bg-slate-100 shadow-md shadow-black py-3 px-10 rounded-md">
+              <ul role="menuitem" class="space-y-1">
+                <li><a href="sage.html" role="menuitem" class="text-lg font-bold text-blue-500">Sage</a></li>
+                <li><a href="acumatica.html" role="menuitem" class="text-lg font-bold text-blue-500">Acumatica</a></li>
+                <li><a href="microsoft.html" role="menuitem" class="text-lg font-bold text-blue-500">Microsoft Dynamics</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="blog.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Industries</a></li>
+          <li><a href="contact.html"  class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Contact</a></li>
+        </ul>
+      </div>
+          
+      <div id="sideNav" class="fixed top-0 right-0 z-10 flex items-center w-0 h-full overflow-x-hidden font-bold text-black duration-700 
+      bg-black">
+              
+        <div class="absolute flex items-center mx-4 mt-5 top-2 left-1">
+          <a href="javascript:void(0)" onclick="exitNav()"><img src="./images/icon-close.svg" alt="Close logo"/></a>
+        </div>
+              
+        <nav class="">
+          <ul class="ml-4 font-serif text-3xl text-red-800 font-semibold text-left sm:text-4xl font-Rajdhani">
+            <li class="p-2 text-blue-800"><a href="index.html" class="hover:text-blue-600 hover:border-b-2 hover:border-blue-600">Home</a></li>
+            <li class="p-2"><a href="about.html">About</a></li>
+            <li class="p-2"><a href="services.html">Services</a></li>
+            <li onmouseover="Hid()" onmouseout="outen()" class="relative p-2">
+              <a href="solution.html">Brand/Product</a>
+              <div hidden id="hid" class="absolute top-0 bg-slate-100 shadow-md shadow-black py-3 px-10 rounded-md">
+                <ul class="space-y-3">
+                  <li><a href="sage.html" class="text-lg font-bold text-blue-500">Sage</a></li>
+                  <li><a href="acumatica.html" class="text-lg font-bold text-blue-500">Acumatica</a></li>
+                  <li><a href="microsoft.html" class="text-lg font-bold text-blue-500">Microsoft Dynamics</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="p-2"><a href="blog.html">Industries</a></li>
+            <li class="p-2"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      
+    </nav>
+  
+    <div onclick="exitNav()" id="sideBar" class="">
+  </div> 
+
+    <!-- HEADER SECTION FINANCIAL -->
+    <div class="relative h-screen overflow-hidden" >
+        <div class="absolute inset-0 bg-headbg bg-cover bg-no-repeat bg-center transition-opacity duration-1000">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center mt-6 lg:mt-20 md:mt-32">
+              <h1 class="text-blue-500 text-2xl font-Rajdhani lg:text-6xl lg:font-semibold font-bold capitalize md:text-5xl">Our History and Experience</h1>
+              <p class="text-gray-200 text-center text-base lg:text-lg font-medium font-Rajdhani mt-8 px-6 lg:px-20">Domain-Plus International Limited, established in 2000, began as a small IT services provider offering software implementation and consulting. Over the years, the company expanded its services to include system integration, software development, network solutions, and comprehensive IT support. Known for its commitment to excellence and customer satisfaction, Domain-Plus quickly earned a reputation for high-quality, reliable technology solutions. Key milestones include expanding services in 2008, <span id="dots">...</span> <span id="more" class="hidden">opening new offices in 2011, launching a flagship software product in 2014, and being recognized as a leading IT solutions provider in 2020. Today, Domain-Plus is a trusted partner for many enterprises, continually innovating to meet client needs in the ever-evolving technology landscape.</span>
+            <button class="text-blue-500 " onclick="myFunction()" id="myBtn">Read more</button>
+        </h1>
+    </div>
+</header>
+
+    <!-- SECTION ONE -->
+    <section class="bg-gray-200">
+        <!-- WHAT MAKES US UNIQUE -->
+        <div class="grid md:grid-cols-1 items-center justify-center lg:grid-cols-2 md:flex md:justify-between py-12">
+            <img src="./images/unique.jpg" alt="Single Image" class="w-[500px] px-8 mb-4 rounded sm:w-[350px] md:w-[410px]
+          hover:scale-105 hover:transition-all hover:duration-1000"/>
+          <div class="px-16">
+            <h3 class="text-2xl lg:text-3xl mt-3 mb-4 font-extrabold text-blue-600 font-Rajdhani md:text-3xl">What Makes Us Unique</h3>
+            <p class=" text-black font-Rajdhani font-normal lg:font-semibold pt-1 text-base">
+                A major reason for our success has been our deep knowledge and understanding of each of the products we market in Nigeria, and as one of the Sage Certified Professionals in the country, we intend to nurture and maintain this professionalism and efficiency to the highest levels, by ensuring that as our customer, you will have access to all the expertise, market knowledge and resources you need for a successful system installation, as well as ongoing help when you need to upgrade or develop your software.
+                We assist our clients to achieve significant improvements in operating performance via state-of the-art automation. Our unique structure consisting of over 15 seasoned and skillful solutions certified professionals/Consultants with real industry experience, assures our clients of the best services at all times.
+                We offer outstanding customer service and our customer-centric approach is designed to engender customer loyalty, whilst at the same time setting us apart from our competitors. The quality of our products and services encourages recommendation by our clients.</span>                
+            </p>
+          </div>
+        </div>
+    </section>    
+        
+    <section>
+        <div class="lg:flex justify-between bg-hero-pattern bg-blend-multiply py-10 lg:px-14">
+            <div class="border-2 rounded-3xl shadow-md p-8 m-4 bg-gray-100">
+                <p class="font-bold text-center text-centertext-2xl text-blue-500 font-Rajdhani lg:text-3xl">Our Mission</p>
+                <p class="mt-4 text-center">  Our mission is to automate our client’s businesses and organizational processes in order to help the customers we serve run their organizations/businesses more efficiently, helping them to gain greater insight into their organizational activities at the click of a button, and providing them with real and lasting benefits.    
+                With the benefit of local understanding and insight, we recommend and provide software, training and business services that are relevant, practical and useful for the demands of today’s SME and Enterprise business environment.
+              </p>
+            </div>    
+
+            <div class="border-2 rounded-3xl shadow-md p-8 m-4 bg-gray-100">
+                <p class="font-bold text-center text-2xl text-blue-500 font-Rajdhani lg:text-3xl">Our Vision</p>
+                <p class="mt-4 text-center"> Our vision is to remain the best example of a business solution and service-providing organization where services are     provided to help organizations to effectively and efficiently manage and improve productivity and achieve sustainability and quality growth by the highest quality staff at all levels using technology solutions.
+                </p>
+            </div>
+            
+            <div class="border-2 rounded-3xl shadow-md p-8 m-4 bg-gray-100">
+                <p class="font-bold text-center text-2xl text-blue-500 font-Rajdhani lg:text-3xl">Our Values</p>
+              <p class="mt-4 text-center">Our core values is a total commitment to delivering innovation with passion and determination to provide solutions to enable efficiency an excellence. We are committed to embracing continuous improvement and driving change by engaging in collaboration and teamwork. Furthermore ourvalues of accountability, responsiveness, and reliability motivate and enable us to provide the highest level of customer service
+              </p>
+            </div>
+          </div>
+    </section>
+
+
+    <!-- SECTION TWO -->
+    <section class=" bg-gray-200 border">
+        <h3 class="pt-4 text-3xl font-bold text-center text-blue-600 md:text-4xl font-Rajdhani">Our Award</h3>
+        <p class="text-center font-medium mx-auto text-black font-Rajdhani pt-5 px-4 text-sm md:text-lg md:max-w-[850px] md:px-0 md:pt-8">
+            We are Registered Sage Business Partner (BP) and a Registered Acumatica BP, with  Certified Consultants of proven and trusted track record who are poised to render professional customer services to our clients. Having in our collections, awards from Sage INC 
+        </p>
+        <!-- AWARDS IMAGE -->
+        <div class="py-10">
+            <div class="flex flex-col items-center justify-center text-center px-7 lg:flex-row gap-y-4 gap-x-6 md:gap-8 lg:gap-10">
+                <div class="border-2 border-gray-500 sm:w-[400px] rounded-md flex items-center gap-4 py-4 px-6">
+                    <img src="./images/africa-award.jpg" alt="Award Third Place" class="rounded-tl-[30px] rounded-br-[30px] shadow-md shadow-black w-[180px] h-[140px] sm:w-[150px] sm:h-[150px] transition-transform hover:scale-90 ease-linear duration-300"/>
+                    <div>
+                        <h3 class="font-bold font-Rajdhani text-black sm:text-xl">South Africa Award</h3>
+                        <p class="text-base font-semibold text-black font-Rajdhani sm:text-base">Best Achiever Sage 300 ERP in 2014.</p>
+                    </div>
+                </div>
+
+                <div class="border-2 border-gray-500 sm:w-[400px] rounded-md flex items-center gap-4 py-4 px-6">
+                    <img src="./images/silver-status.jpg" alt="silver-status award" class="rounded-tl-[30px] rounded-br-[30px] shadow-md shadow-black w-[180px] h-[140px] sm:w-[220px] sm:h-[150px] transition-transform hover:scale-90 ease-linear duration-300"/>
+                    <div>
+                        <h3 class="font-bold font-Rajdhani text-black sm:text-xl">Silver Status Award</h3>
+                        <p class="text-base font-semibold text-black font-Rajdhani sm:text-lg">Solution Provider in 2014.</p>
+                    </div>
+                </div>
+
+                <div class="border-2 border-gray-500 sm:w-[400px] rounded-md flex items-center gap-4 py-4 px-5">
+                    <img src="./images/business-achievement-award.png" alt="business achievement award" class="rounded-tl-[30px] rounded-br-[30px] shadow-md shadow-black w-[130px] h-[140px] sm:w-[170px] sm:h-[150px] transition-transform hover:scale-90 ease-linear duration-300"/>
+                    <div>
+                        <h3 class="font-bold font-Rajdhani text-black sm:text-xl">West Africa Award</h3>
+                        <p class="text-base font-semibold text-black font-Rajdhani sm:text-lg">Achievement of Business Partner in 2016.</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+
+     <!-- FOOTER  -->
+    <footer class="">
+        <div class="px-6 py-10 mt-10 lg:flex lg:justify-evenly">
+            <div class="">
+              <div class="flex items-center py-3">
+                <img src="./images/logo (2).png" alt="logo" class="w-20" />
+                <div class="text-white">
+                  <p class="leading-3 text-center">
+                    <span class="pl-5 text-xl font-semibold tracking-widest text-white">Domain-Plus</span><br />
+                    <span class="tracking-tighter ">International Limited</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-white lg:max-w-96">
+                Domain Plus provides reliable domain registration, web hosting, and website development, ensuring a strong online presence with user-friendly tools and expert support.
+              </p>
+              <div class="flex items-center gap-4 py-3">
+                
+                <p class="text-white ">
+                  Domain-Plus International Limited - DPIL
+                </p>
+              </div>
+            </div>
+            <section class="flex gap-10 text-white md:gap-48 lg:gap-10 lg:px-">
+              <div>
+                <p class="pb-3 text-2xl pt-7">SOLUTIONS</p>
+                <ul class="px-5 list-disc">
+                  <li class="py-2"><a href="solution.html#sage300">Sage 300</a></li>
+                  <li class="py-2"><a href="solution.html#sage3x">Sage X3</a></li>
+                  <li class="py-2"><a href="solution.html#sagecrm">Sage CRM</a></li>
+                  <li class="py-2"><a href="solution.html#sage300people">Sage 300 People</a></li>
+                  <!-- <li class="py-2"><a href="solution.html#acumatica">Acumatica</a></li>
+                  <li class="py-2"><a href="solution.html#microsoftdynamic">Microsoft Dynamic 365</a></li> -->
+                </ul>
+              </div>
+              <div>
+                <p class="pb-3 text-2xl pt-7">QUICK LINKS</p>
+                <ul class="px-5 list-disc">
+                  <li class="py-2"><a href="index.html">Home</a></li>
+                  <li class="py-2"><a href="solution.html">Solution</a></li>
+                  <li class="py-2"><a href="contact.html">Contact</a></li>
+                  <li class="py-2"><a href="services.html">Services</a></li>
+                </ul>
+              </div>
+            </section>
+            <div class="mt-5">
+              <p class="pb-3 text-2xl text-white ">NEWSLETTER</p>
+              <input type="text" name="email" placeholder="Your Email..." class="w-full p-3 border-2 rounded-lg outline-none cursor-pointer" />
+              <button class="w-full px-4 py-3 my-4 font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                SUBSCRIBE
+              </button>
+              <div class="md:space-x-4">
+                <a href=""><ion-icon name="logo-facebook" class="text-xl text-white md:text-3xl hover:text-blue-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter" class="text-xl text-white md:text-3xl hover:text-blue-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram" class="text-xl text-white md:text-3xl hover:text-red-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-whatsapp" class="text-xl text-white md:text-3xl hover:text-green-700"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin" class="text-xl text-white md:text-3xl hover:text-blue-700"></ion-icon></a></a>
+                <a href="mailto:"><ion-icon name="mail-outline" class="text-xl text-white md:text-3xl hover:text-red-700"></ion-icon></a>
+            </div>
+            </div>
+        </div>
+
+            <!-- DOMAIN PLUS COPYRIGHT -->
+            <div class="bg-white  text-black font-bold flex items-center justify-center md:justify-between px-20 py-2">
+                <p class="font-Rajdhani text-sm lg:text-lg">Copyright &copy 2024 Domain-Plus International Limited. All right reserved</p>
+                <p class="font-Rajdhani text-sm lg:text-lg">Powered by dervac</p>
+            </div>
+      </footer>
+
+<a href="contact.html" class="fixed z-50 bottom-5 ">
+    <img src="./images/let_s-chat-removebg-preview.png" alt="chat image" class="w-16 transition-opacity duration-300 opacity-50 hover:opacity-100">
+</a>
+
+<button id="go-up" onclick="scrollToTop()" class="fixed transition-opacity duration-300 opacity-0 bottom-4 right-4">
+    <img src="./images/arrow.png" alt="arrow up image" class="w-10">
+</button>
+
+
+    <!-- JAVASCRIPT WORK FOR MENU -->
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
