@@ -1,15 +1,15 @@
 function openNav() {
     document.getElementById("sideBar").style.width = "100%";
     document.getElementById("sideNav").style.width = "60%";
-  }
-  
-  /*Close navigation*/
-  function exitNav() {
+}
+
+/*Close navigation*/
+function exitNav() {
     document.getElementById("sideBar").style.width = "0%";
     document.getElementById("sideNav").style.width = "0%";
-  }
+}
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('myForm');
 
     // form.addEventListener('submit', function(event) {
@@ -51,7 +51,7 @@ let index = 0;
 // }
 
 // changeBackground(); // Start the slideshow
-  
+
 
 //arrow up section
 // Function to scroll to the top of the page
@@ -60,7 +60,7 @@ function scrollToTop() {
 }
 
 // Function to toggle button visibility based on scroll position
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var button = document.getElementById('go-up');
     if (window.scrollY > 200) { // Adjust the scroll position threshold as needed
         button.style.opacity = '1';
@@ -71,7 +71,7 @@ window.addEventListener('scroll', function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const options = {
         threshold: 0.5 // Change the threshold as needed (0.5 means halfway into the viewport)
     };
@@ -166,18 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const summaries = document.querySelectorAll('summary');
 
     summaries.forEach(summary => {
-        summary.addEventListener('click', function() {
+        summary.addEventListener('click', function () {
             this.parentNode.querySelector('details').toggleAttribute('open');
         });
     });
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('supportModal');
     const openModalButton = document.getElementById('openModalButton');
     const closeModalButton = document.getElementById('closeModalButton');
@@ -194,27 +194,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Add any necessary JavaScript code here
-document.addEventListener('DOMContentLoaded', function() {
-  const subscribeButton = document.querySelector('#sButton');
-//   subscribeButton.addEventListener('click', function() {
-//     const emailInput = document.querySelector('input[name="email"]');
-//     if (emailInput.value) {
-//       alert(`Subscribed with email: ${emailInput.value}`);
-//       emailInput.value = '';
-//     } else {
-//       alert('Please enter a valid email address.');
-//     }
-//   });
+document.addEventListener('DOMContentLoaded', function () {
+    const subscribeButton = document.querySelector('#sButton');
+    //   subscribeButton.addEventListener('click', function() {
+    //     const emailInput = document.querySelector('input[name="email"]');
+    //     if (emailInput.value) {
+    //       alert(`Subscribed with email: ${emailInput.value}`);
+    //       emailInput.value = '';
+    //     } else {
+    //       alert('Please enter a valid email address.');
+    //     }
+    //   });
 });
 
 
 
 
 // scripts.js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const goUpButton = document.getElementById('go-up');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
             goUpButton.classList.remove('opacity-0');
             goUpButton.classList.add('opacity-100');
@@ -236,7 +236,7 @@ function scrollToTop() {
 
 //services modal section
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('#serviceModal');
     const openModalButton = document.getElementById('openModalButton');
     const closeModalButton = document.getElementById('serviceModalButton');
@@ -258,29 +258,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const modalContent = document.getElementById("modal-content");
     const closeModalButton = document.getElementById("close-modal");
-  
+
     detailsElements.forEach(details => {
-      const summary = details.querySelector("summary");
-      summary.addEventListener("click", (event) => {
-        event.preventDefault();
-        modalContent.innerHTML = details.innerHTML;
-        modal.classList.remove("hidden");
-      });
+        const summary = details.querySelector("summary");
+        summary.addEventListener("click", (event) => {
+            event.preventDefault();
+            modalContent.innerHTML = details.innerHTML;
+            modal.classList.remove("hidden");
+        });
     });
-  
+
     // closeModalButton.addEventListener("click", () => {
     //   modal.classList.add("hidden");
     // });
-  
+
     window.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        modal.classList.add("hidden");
-      }
+        if (event.target === modal) {
+            modal.classList.add("hidden");
+        }
     });
-  });
+});
 
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const scrollContainer = document.getElementById('scrollContainer');
     const scrollLeftButton = document.getElementById('scrollLeft');
     const scrollRightButton = document.getElementById('scrollRight');
@@ -291,59 +291,59 @@ document.addEventListener("DOMContentLoaded", () => {
     //         left: -200,  // Adjust this value based on your needs
     //         behavior: 'smooth'
     //     });
-    });
+});
 
-    // Function to scroll right
-    // scrollRightButton.addEventListener('click', () => {
-    //     scrollContainer.scrollBy({
-    //         left: 200,  // Adjust this value based on your needs
-    //         behavior: 'smooth'
-    //     });
-    // });
+// Function to scroll right
+// scrollRightButton.addEventListener('click', () => {
+//     scrollContainer.scrollBy({
+//         left: 200,  // Adjust this value based on your needs
+//         behavior: 'smooth'
+//     });
+// });
 
-    // Enable mouse drag to scroll
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+// Enable mouse drag to scroll
+let isDown = false;
+let startX;
+let scrollLeft;
 
-    // scrollContainer.addEventListener('mousedown', (e) => {
-    //     isDown = true;
-    //     scrollContainer.classList.add('active');
-    //     startX = e.pageX - scrollContainer.offsetLeft;
-    //     scrollLeft = scrollContainer.scrollLeft;
-    // });
+// scrollContainer.addEventListener('mousedown', (e) => {
+//     isDown = true;
+//     scrollContainer.classList.add('active');
+//     startX = e.pageX - scrollContainer.offsetLeft;
+//     scrollLeft = scrollContainer.scrollLeft;
+// });
 
-    // scrollContainer.addEventListener('mouseleave', () => {
-    //     isDown = false;
-    //     scrollContainer.classList.remove('active');
-    // });
+// scrollContainer.addEventListener('mouseleave', () => {
+//     isDown = false;
+//     scrollContainer.classList.remove('active');
+// });
 
-    // scrollContainer.addEventListener('mouseup', () => {
-    //     isDown = false;
-    //     scrollContainer.classList.remove('active');
-    // });
+// scrollContainer.addEventListener('mouseup', () => {
+//     isDown = false;
+//     scrollContainer.classList.remove('active');
+// });
 
-    // scrollContainer.addEventListener('mousemove', (e) => {
-    //     if (!isDown) return;
-    //     e.preventDefault();
-    //     const x = e.pageX - scrollContainer.offsetLeft;
-    //     const walk = (x - startX) * 3; // Adjust the scroll speed as needed
-    //     scrollContainer.scrollLeft = scrollLeft - walk;
-    // });
+// scrollContainer.addEventListener('mousemove', (e) => {
+//     if (!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - scrollContainer.offsetLeft;
+//     const walk = (x - startX) * 3; // Adjust the scroll speed as needed
+//     scrollContainer.scrollLeft = scrollLeft - walk;
+// });
 
-    // Enable touch to scroll
-    let startTouchX;
+// Enable touch to scroll
+let startTouchX;
 
-    // scrollContainer.addEventListener('touchstart', (e) => {
-    //     startTouchX = e.touches[0].pageX;
-    //     scrollLeft = scrollContainer.scrollLeft;
-    // });
+// scrollContainer.addEventListener('touchstart', (e) => {
+//     startTouchX = e.touches[0].pageX;
+//     scrollLeft = scrollContainer.scrollLeft;
+// });
 
-    // scrollContainer.addEventListener('touchmove', (e) => {
-    //     const x = e.touches[0].pageX;
-    //     const walk = (x - startTouchX) * 3; // Adjust the scroll speed as needed
-    //     scrollContainer.scrollLeft = scrollLeft - walk;
-    // });
+// scrollContainer.addEventListener('touchmove', (e) => {
+//     const x = e.touches[0].pageX;
+//     const walk = (x - startTouchX) * 3; // Adjust the scroll speed as needed
+//     scrollContainer.scrollLeft = scrollLeft - walk;
+// });
 
 
 
@@ -363,108 +363,108 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Optional: Close the pop-up when clicking outside of it
     window.addEventListener('click', function (e) {
-      if (e.target === popup) {
-        popup.classList.add('hidden');
-      }
+        if (e.target === popup) {
+            popup.classList.add('hidden');
+        }
     });
-  });
+});
 
-const openModal = ()=>{
+const openModal = () => {
     const popup = document.getElementById('popup');
     popup.classList.remove('hidden');
 }
 
 
-const closeModal = () =>{
+const closeModal = () => {
     const popup = document.getElementById('popup');
     popup.classList.add('hidden');
 }
 
-const openModals = ()=>{
+const openModals = () => {
     const popup = document.getElementById('popups');
     popup.classList.remove('hidden');
 }
 
 
-const closeModals = () =>{
+const closeModals = () => {
     const popup = document.getElementById('popups');
     popup.classList.add('hidden');
 }
 
-const openModalone = ()=>{
+const openModalone = () => {
     const popup = document.getElementById('popupone');
     popup.classList.remove('hidden');
 }
 
 
-const closeModalone = () =>{
+const closeModalone = () => {
     const popup = document.getElementById('popupone');
     popup.classList.add('hidden');
 }
 
-const openModaltwo = ()=>{
+const openModaltwo = () => {
     const popup = document.getElementById('popuptwo');
     popup.classList.remove('hidden');
 }
 
 
-const closeModaltwo = () =>{
+const closeModaltwo = () => {
     const popup = document.getElementById('popuptwo');
     popup.classList.add('hidden');
 }
 
-const openModalthree = ()=>{
+const openModalthree = () => {
     const popup = document.getElementById('popupthree');
     popup.classList.remove('hidden');
 }
 
 
-const closeModalthree = () =>{
+const closeModalthree = () => {
     const popup = document.getElementById('popupthree');
     popup.classList.add('hidden');
 }
 
-const openModalfour = ()=>{
+const openModalfour = () => {
     const popup = document.getElementById('popupfour');
     popup.classList.remove('hidden');
 }
 
 
-const closeModalfour = () =>{
+const closeModalfour = () => {
     const popup = document.getElementById('popupfour');
     popup.classList.add('hidden');
 }
 
-const openModalfive = ()=>{
+const openModalfive = () => {
     const popup = document.getElementById('popupfive');
     popup.classList.remove('hidden');
 }
 
 
-const closeModalfive = () =>{
+const closeModalfive = () => {
     const popup = document.getElementById('popupfive');
     popup.classList.add('hidden');
 }
 
-const openModalsix = ()=>{
+const openModalsix = () => {
     const popup = document.getElementById('popupsix');
     popup.classList.remove('hidden');
 }
 
 
-const closeModalsix = () =>{
+const closeModalsix = () => {
     const popup = document.getElementById('popupsix');
     popup.classList.add('hidden');
 }
 
 const openSupportModal = () => {
     console.log('this is being clicked');
-    const  Modal = document.getElementById('Modal')
+    const Modal = document.getElementById('Modal')
     Modal.classList.remove('hidden')
 }
 
 const closeSupportModal = () => {
-    const  Modal = document.getElementById('Modal')
+    const Modal = document.getElementById('Modal')
     Modal.classList.add('hidden')
 }
 
@@ -474,49 +474,49 @@ function myFunction() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var btnText = document.getElementById("myBtn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
-    }
-  }
 
-  // readmore
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+    }
+}
+
+// readmore
 function myFunction1() {
     var dots1 = document.getElementById("dots1");
     var moreText = document.getElementById("more1");
     var btnText = document.getElementById("myBtn1");
-  
+
     if (dots1.style.display === "none") {
-      dots1.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
+        dots1.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
     } else {
-      dots1.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
+        dots1.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
     }
-  }
+}
 function myFunction2() {
     var dots1 = document.getElementById("dots2");
     var moreText = document.getElementById("more2");
     var btnText = document.getElementById("myBtn2");
-  
+
     if (dots1.style.display === "none") {
-      dots1.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
+        dots1.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
     } else {
-      dots1.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
+        dots1.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
     }
-  }
+}
 
 
 
