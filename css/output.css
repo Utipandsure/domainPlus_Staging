@@ -1246,6 +1246,10 @@ video {
   background-image: url('../images/e-invoicing-FIRS-dp.jpg');
 }
 
+.bg-Insursa {
+  background-image: url('../images/DP-insursa-cover2.jpg');
+}
+
 .bg-headbg {
   background-image: url('../images/titlepage-bk-dp.jpg');
 }
@@ -1262,6 +1266,9 @@ video {
   background-image: url('../images/microsoft_solution.jpeg');
 }
 
+.bg-e-Invoicing{
+  background-image: url('../images/e-invoicing-FIRS-dp.jpg');
+}
 .bg-quickbook {
   background-image: url('../images/quickbook_solution.jpeg');
 }
