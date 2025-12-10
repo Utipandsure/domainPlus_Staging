@@ -60,6 +60,114 @@ html,
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
+/*.section .upd{
+  justify-content: center;
+  
+}*/
+.controlA{
+  display: block;
+  justify-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.controlB{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  margin: 20px 20px;
+}
+.control{
+  background-color: #eef1f8;
+  justify-items: center;
+  padding: 20px;
+  margin: 20px;
+  width: 320px;
+  height: 300px;
+  box-shadow: 10px 10px 20px rgba(112, 111, 111, 0.3);
+}
+.upd1{
+  margin-top: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  position: relative;
+  padding: 30px;
+  justify-content: center;
+}
+.upd{
+  margin-top: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  position: relative;
+  padding: 30px;
+  justify-items: center;
+}
+.tit{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+  align-items: center;
+  color: #10034b;
+  justify-content: center;
+  justify-items: center;
+  display: block;
+}
+.pic{
+  height: 150pt;
+  display: flex;
+  border-radius: 14px;
+  border: #10034b 2pt;
+  box-shadow: black(1,2,2,10);
+}
+
+.gallery {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+}
+
+.gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.gallery:hover img:nth-child(1) {
+  transform: translateX(-0px);
+}
+
+.gallery:hover img:nth-child(2) {
+  transform: translateX(310px);
+}
+
+.gallery:hover img:nth-child(3) {
+  transform: translateX(-310px);
+}
+
+.gallery:hover img:nth-child(4) {
+  transform: translateX(0px);
+}
+
+.gallery:hover img:nth-child(5) {
+  transform: translateX(610px);
+}
+
+.pic {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
 
 body {
   margin: 0;
@@ -239,7 +347,7 @@ button,
 input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit']) {
-  -webkit-appearance: button;
+  -webkit-appearance:button;
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -1263,7 +1371,7 @@ video {
 }
 
 .bg-microsoft {
-  background-image: url('../images/microsoft_solution.jpeg');
+  background-image: url('../images/e-invoicing-FIRS-dp.jpg');
 }
 
 .bg-e-Invoicing{

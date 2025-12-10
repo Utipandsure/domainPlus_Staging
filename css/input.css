@@ -10,6 +10,12 @@
     transform: translateX(-100%);
   }
 }
+.upd{
+  margin: 80px;
+  background-color: #ecc8f7;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+}
 
 .scrolling-wrapper {
   display: flex;
@@ -56,13 +62,6 @@
       transform: rotate(360deg);
   }
 }
-
-
-
-
-
-
-
 
 .hover-light::before {
     content: "";
